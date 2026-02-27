@@ -124,29 +124,62 @@ const AnimalsShowcaseSlide = ({ slide }: { slide: any }) => {
     { name: "Lobo", letter: "S", image: discWolf, color: "blue" },
   ];
 
+  const temperaments = [
+    { name: "Colérico", color: "red", emoji: "🔥", image: marvelIronMan },
+    { name: "Sanguíneo", color: "orange", emoji: "☀️", image: marvelSpiderman },
+    { name: "Fleumático", color: "blue", emoji: "🧊", image: marvelCaptain },
+    { name: "Melancólico", color: "green", emoji: "🌧️", image: marvelHulk },
+  ];
+
   return (
-    <div className="h-full flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden">
+    <div className="h-full flex flex-col items-center justify-center p-6 md:p-10 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-      <div className="relative z-10 w-full max-w-5xl">
+      <div className="relative z-10 w-full max-w-6xl">
         <motion.h2 custom={0} variants={popIn} initial="hidden" animate="visible"
-          className="font-display text-4xl md:text-6xl text-gradient-gold mb-2 text-center">
+          className="font-display text-4xl md:text-5xl text-gradient-gold mb-1 text-center">
           {slide.title}
         </motion.h2>
         <motion.p custom={1} variants={fadeUp} initial="hidden" animate="visible"
-          className="text-muted-foreground font-sans text-center mb-8 text-lg">{slide.subtitle}</motion.p>
-        <div className="grid grid-cols-4 gap-4 md:gap-6">
+          className="text-muted-foreground font-sans text-center mb-6 text-base">{slide.subtitle}</motion.p>
+
+        {/* DISC Animals */}
+        <motion.p custom={1.5} variants={fadeUp} initial="hidden" animate="visible"
+          className="font-display text-xl text-primary text-center mb-3 uppercase tracking-widest">🐾 Perfis DISC</motion.p>
+        <div className="grid grid-cols-4 gap-3 md:gap-4 mb-6">
           {animals.map((a, i) => {
             const c = colorMap[a.color];
             return (
               <motion.div key={a.name} custom={i + 2} variants={zoomIn} initial="hidden" animate="visible"
                 className={`rounded-2xl overflow-hidden border-2 ${c.border} ${c.glow} group cursor-pointer`}>
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={a.image} alt={a.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className={`absolute inset-0 bg-gradient-to-t ${c.gradient}`} />
-                  <div className="absolute bottom-0 left-0 right-0 p-3 text-center">
-                    <p className={`font-display text-3xl ${c.text} drop-shadow-lg`}>{a.letter}</p>
-                    <p className="font-sans text-sm text-foreground font-bold drop-shadow-lg">{a.name}</p>
+                  <div className="absolute bottom-0 left-0 right-0 p-2 text-center">
+                    <p className={`font-display text-2xl ${c.text} drop-shadow-lg`}>{a.letter}</p>
+                    <p className="font-sans text-xs text-foreground font-bold drop-shadow-lg">{a.name}</p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Temperaments */}
+        <motion.p custom={6} variants={fadeUp} initial="hidden" animate="visible"
+          className="font-display text-xl text-primary text-center mb-3 uppercase tracking-widest">🦸 Temperamentos</motion.p>
+        <div className="grid grid-cols-4 gap-3 md:gap-4">
+          {temperaments.map((t, i) => {
+            const c = colorMap[t.color];
+            return (
+              <motion.div key={t.name} custom={i + 7} variants={zoomIn} initial="hidden" animate="visible"
+                className={`rounded-2xl overflow-hidden border-2 ${c.border} ${c.glow} group cursor-pointer`}>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img src={t.image} alt={t.name}
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110" />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent`} />
+                  <div className="absolute bottom-0 left-0 right-0 p-2 text-center">
+                    <p className={`font-display text-lg ${c.text} drop-shadow-lg`}>{t.emoji} {t.name}</p>
                   </div>
                 </div>
               </motion.div>
