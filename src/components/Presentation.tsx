@@ -3,8 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2 } from "lucide-react";
 import { slidesData } from "@/data/slidesData";
 import { SlideRenderer } from "./SlideRenderer";
-import PdfExporter from "./PdfExporter";
-import PptxExporter from "./PptxExporter";
 
 const Presentation = () => {
   const [current, setCurrent] = useState(0);
@@ -51,8 +49,6 @@ const Presentation = () => {
             <span className="font-display text-sm text-foreground/80">Perfil Comportamental</span>
           </div>
           <div className="flex items-center gap-4">
-            <PptxExporter />
-            <PdfExporter />
             <span className="text-xs text-muted-foreground font-sans">
               {current + 1} / {total}
             </span>
