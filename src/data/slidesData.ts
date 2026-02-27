@@ -3,7 +3,7 @@ import discDolphin from "@/assets/disc-dolphin.jpg";
 import discEagle from "@/assets/disc-eagle.jpg";
 import discWolf from "@/assets/disc-wolf.jpg";
 import marvelIronMan from "@/assets/marvel-ironman-3d.jpg";
-import marvelSpiderman from "@/assets/marvel-spiderman-3d.jpg";
+import marvelDeadpool from "@/assets/marvel-deadpool-3d.jpg";
 import marvelHulk from "@/assets/marvel-hulk-3d.jpg";
 import marvelCaptain from "@/assets/marvel-captain-3d.jpg";
 
@@ -16,7 +16,7 @@ export const discProfiles = {
 
 export const marvelChars = {
   colerico: { name: "Tony Stark / Homem de Ferro", image: marvelIronMan },
-  sanguineo: { name: "Spider-Man / Homem-Aranha", image: marvelSpiderman },
+  sanguineo: { name: "Deadpool / Wade Wilson", image: marvelDeadpool },
   melancolico: { name: "Bruce Banner / Hulk", image: marvelHulk },
   fleumatico: { name: "Capitão América", image: marvelCaptain },
 };
@@ -112,7 +112,7 @@ export const slidesData = [
     title: "Sanguíneo", color: "orange", section: "Temperamentos",
     description: "A pessoa que tem o temperamento sanguíneo é caracterizada por ser mais extrovertida e otimista. São pessoas alegres, esperançosas, calorosas, amáveis e simpáticas. De modo geral são explosivas, instáveis emocionalmente, impulsivas e até egoístas.",
     marvelChar: marvelChars.sanguineo.name, marvelImage: marvelChars.sanguineo.image,
-    marvelWhy: "Alegre, comunicativo, cheio de energia e sempre fazendo piada — mesmo no meio da batalha! 🕸️",
+    marvelWhy: "Alegre, comunicativo, cheio de energia e sempre fazendo piada — mesmo no meio da batalha! Não para de falar nunca! 💀🔴",
   },
   // 13 - Sanguíneo características
   {

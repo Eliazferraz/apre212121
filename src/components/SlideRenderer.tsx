@@ -7,7 +7,7 @@ import discDolphin from "@/assets/disc-dolphin.jpg";
 import discEagle from "@/assets/disc-eagle.jpg";
 import discWolf from "@/assets/disc-wolf.jpg";
 import marvelIronMan from "@/assets/marvel-ironman-3d.jpg";
-import marvelSpiderman from "@/assets/marvel-spiderman-3d.jpg";
+import marvelDeadpool from "@/assets/marvel-deadpool-3d.jpg";
 import marvelHulk from "@/assets/marvel-hulk-3d.jpg";
 import marvelCaptain from "@/assets/marvel-captain-3d.jpg";
 
@@ -126,7 +126,7 @@ const AnimalsShowcaseSlide = ({ slide }: { slide: any }) => {
 
   const temperaments = [
     { name: "Colérico", color: "red", emoji: "🔥", image: marvelIronMan },
-    { name: "Sanguíneo", color: "orange", emoji: "☀️", image: marvelSpiderman },
+    { name: "Sanguíneo", color: "orange", emoji: "☀️", image: marvelDeadpool },
     { name: "Fleumático", color: "blue", emoji: "🧊", image: marvelCaptain },
     { name: "Melancólico", color: "green", emoji: "🌧️", image: marvelHulk },
   ];
@@ -364,7 +364,7 @@ const CharacteristicsSlide = ({ slide }: { slide: any }) => {
 const TemperamentsOverviewSlide = () => {
   const temps = [
     { name: "Colérico", color: "red", char: "Homem de Ferro", image: marvelIronMan, keyword: "Explosivo & Líder" },
-    { name: "Sanguíneo", color: "orange", char: "Homem-Aranha", image: marvelSpiderman, keyword: "Alegre & Otimista" },
+    { name: "Sanguíneo", color: "orange", char: "Deadpool", image: marvelDeadpool, keyword: "Alegre & Otimista" },
     { name: "Melancólico", color: "green", char: "Hulk", image: marvelHulk, keyword: "Profundo & Sensível" },
     { name: "Fleumático", color: "blue", char: "Capitão América", image: marvelCaptain, keyword: "Calmo & Paciente" },
   ];
