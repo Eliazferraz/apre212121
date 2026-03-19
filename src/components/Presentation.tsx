@@ -50,6 +50,7 @@ const Presentation = () => {
             <span className="font-display text-sm text-foreground/80">Perfil Comportamental</span>
           </div>
           <div className="flex items-center gap-4">
+            <PptxExporter />
             <span className="text-xs text-muted-foreground font-sans">
               {current + 1} / {total}
             </span>
