@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2 } from "lucide-react";
 import { slidesData } from "@/data/slidesData";
 import { SlideRenderer } from "./SlideRenderer";
+import PptxExporter from "./PptxExporter";
 
 const Presentation = () => {
   const [current, setCurrent] = useState(0);
