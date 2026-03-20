@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import bgEpic from "@/assets/bg-epic.jpg";
 import slideBgClosing from "@/assets/slide-bg-closing.jpg";
