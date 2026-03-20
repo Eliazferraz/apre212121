@@ -532,28 +532,7 @@ const LinksSlide = ({ slide }: { slide: any }) => (
 
 /* ==================== VIDEO ==================== */
 const VideoSlide = ({ slide }: { slide: any }) => {
-  const [videoSrc, setVideoSrc] = useState<string | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setVideoSrc(url);
-    }
-  };
-
-  const togglePlay = () => {
-    if (!videoRef.current) return;
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    }
-  };
 
   return (
     <div className="h-full flex flex-col items-center justify-center p-8 md:p-16 relative overflow-hidden">
@@ -567,42 +546,15 @@ const VideoSlide = ({ slide }: { slide: any }) => {
           className="text-muted-foreground font-sans text-center mb-8">{slide.subtitle}</motion.p>
 
         <motion.div custom={2} variants={zoomIn} initial="hidden" animate="visible"
-          className="w-full aspect-video rounded-2xl overflow-hidden border-2 border-border/50 bg-card/80 backdrop-blur-sm shadow-[0_0_60px_-10px_hsl(45,100%,55%,0.2)] relative">
-          {!videoSrc ? (
-            <label className="flex flex-col items-center justify-center h-full cursor-pointer hover:bg-card/60 transition-colors group">
-              <input type="file" accept="video/*" onChange={handleFileSelect} className="hidden" onClick={(e) => e.stopPropagation()} />
-              <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors group-hover:scale-105 group-active:scale-95">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                  <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
-                  <rect x="2" y="6" width="14" height="12" rx="2" />
-                </svg>
-              </div>
-              <p className="text-foreground font-sans font-bold text-lg">Clique para carregar um vídeo</p>
-              <p className="text-muted-foreground font-sans text-sm mt-1">MP4, WebM, MOV</p>
-            </label>
-          ) : (
-            <div className="relative h-full" onClick={(e) => { e.stopPropagation(); togglePlay(); }}>
-              <video
-                ref={videoRef}
-                src={videoSrc}
-                className="w-full h-full object-contain bg-black"
-                controls
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
-                onClick={(e) => e.stopPropagation()}
-              />
-            </div>
-          )}
+          className="w-full aspect-video rounded-2xl overflow-hidden border-2 border-border/50 bg-card/80 backdrop-blur-sm shadow-[0_0_60px_-10px_hsl(45,100%,55%,0.2)]">
+          <video
+            ref={videoRef}
+            src={slide.videoUrl || "/videos/apresentacao.mp4"}
+            className="w-full h-full object-contain bg-black"
+            controls
+            onClick={(e) => e.stopPropagation()}
+          />
         </motion.div>
-
-        {videoSrc && (
-          <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="flex justify-center mt-4">
-            <label className="text-sm text-muted-foreground hover:text-primary font-sans cursor-pointer transition-colors">
-              <input type="file" accept="video/*" onChange={handleFileSelect} className="hidden" />
-              📂 Trocar vídeo
-            </label>
-          </motion.div>
-        )}
       </div>
     </div>
   );
