@@ -50,6 +50,7 @@ export const SlideRenderer = ({ slide }: { slide: any; index: number }) => {
     case "comparison": return <ComparisonSlide />;
     case "quote": return <QuoteSlide slide={slide} />;
     case "links": return <LinksSlide slide={slide} />;
+    case "video": return <VideoSlide slide={slide} />;
     default: return null;
   }
 };

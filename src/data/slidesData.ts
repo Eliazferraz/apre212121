@@ -169,4 +169,10 @@ export const slidesData = [
       { label: "Resultado DISC", url: "https://www.pactorh.com.br/teste-disc/disc/" },
     ],
   },
+  // 23 - Video
+  {
+    id: 23, type: "video" as const,
+    title: "Vídeo",
+    subtitle: "Assista ao conteúdo complementar",
+  },
 ];
