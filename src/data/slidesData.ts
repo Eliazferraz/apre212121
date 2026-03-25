@@ -58,20 +58,20 @@ export const slidesData = [
     detail: "Executam suas funções de forma organizada, com rapidez e qualidade. Contudo, sendo bastante autossuficientes, o trabalho em grupo pode ser um empecilho.",
     traits: ["Focado", "Direto", "Competitivo"], label: "Executores",
   },
-  // 6 - Influência (Golfinho)
+  // 6 - Influência (Águia)
   {
     id: 6, type: "profile" as const,
-    title: "Influência", color: "yellow", animal: "Golfinho", animalImage: discDolphin,
-    description: "Esse perfil gosta de realizar as coisas junto; é sensível e voltado às pessoas; gosta de cultivar relacionamentos.",
-    detail: "É um perfil essencialmente tradicionalista, pensa muito na equipe, em como contribuir e fazer a colaboração mútua; em ter um ambiente seguro e de harmonia.",
-    traits: ["Persuasivo", "Comunicativo", "Espontâneo"], label: "Comunicadores",
-  },
-  // 7 - Conformidade (Águia)
-  {
-    id: 7, type: "profile" as const,
-    title: "Calculista", color: "purple", animal: "Águia", animalImage: discEagle,
+    title: "Influência", color: "yellow", animal: "Águia", animalImage: discEagle,
     description: "É aquele que gosta de fazer diferente, tem muita criatividade, é intuitivo, tem foco no futuro, mas ao mesmo tempo é distraído e curioso.",
     detail: "Gosta de trabalhar de forma informal e casual e às vezes acaba tendo muita iniciativa e pouco acabativa.",
+    traits: ["Persuasivo", "Comunicativo", "Espontâneo"], label: "Comunicadores",
+  },
+  // 7 - Conformidade (Golfinho)
+  {
+    id: 7, type: "profile" as const,
+    title: "Conformidade", color: "purple", animal: "Golfinho", animalImage: discDolphin,
+    description: "Esse perfil gosta de realizar as coisas junto; é sensível e voltado às pessoas; gosta de cultivar relacionamentos.",
+    detail: "É um perfil essencialmente tradicionalista, pensa muito na equipe, em como contribuir e fazer a colaboração mútua; em ter um ambiente seguro e de harmonia.",
     traits: ["Cauteloso", "Lógico", "Organizado"], label: "Analistas",
   },
   // 8 - Estabilidade (Lobo)
