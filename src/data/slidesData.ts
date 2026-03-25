@@ -9,8 +9,8 @@ import marvelCaptain from "@/assets/marvel-captain-3d.jpg";
 
 export const discProfiles = {
   D: { animal: "Tubarão", image: discShark, color: "red" },
-  I: { animal: "Golfinho", image: discDolphin, color: "yellow" },
-  C: { animal: "Águia", image: discEagle, color: "purple" },
+  I: { animal: "Águia", image: discEagle, color: "yellow" },
+  C: { animal: "Golfinho", image: discDolphin, color: "purple" },
   S: { animal: "Lobo", image: discWolf, color: "blue" },
 };
 
