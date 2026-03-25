@@ -197,8 +197,8 @@ const AnimalsShowcaseSlide = ({ slide }: { slide: any }) => {
 const DiscSlide = ({ slide }: { slide: any }) => {
   const profiles = [
     { label: "D", name: "Dominância", sub: "Executores", traits: ["Focado", "Direto", "Competitivo"], color: "red", image: discShark, animal: "Tubarão", pos: "EXTROVERTIDO" },
-    { label: "I", name: "Influência", sub: "Comunicadores", traits: ["Persuasivo", "Comunicativo", "Espontâneo"], color: "yellow", image: discDolphin, animal: "Golfinho", pos: "EXTROVERTIDO" },
-    { label: "C", name: "Conformidade", sub: "Analistas", traits: ["Cauteloso", "Lógico", "Organizado"], color: "purple", image: discEagle, animal: "Águia", pos: "INTROVERTIDO" },
+    { label: "I", name: "Influência", sub: "Comunicadores", traits: ["Persuasivo", "Comunicativo", "Espontâneo"], color: "yellow", image: discEagle, animal: "Águia", pos: "EXTROVERTIDO" },
+    { label: "C", name: "Conformidade", sub: "Analistas", traits: ["Cauteloso", "Lógico", "Organizado"], color: "purple", image: discDolphin, animal: "Golfinho", pos: "INTROVERTIDO" },
     { label: "S", name: "Estabilidade", sub: "Planejadores", traits: ["Seguro", "Confiável", "Conservador"], color: "blue", image: discWolf, animal: "Lobo", pos: "INTROVERTIDO" },
   ];
 
