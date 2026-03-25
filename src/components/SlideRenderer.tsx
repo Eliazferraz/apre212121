@@ -121,8 +121,8 @@ const ContentSlide = ({ slide }: { slide: any }) => (
 const AnimalsShowcaseSlide = ({ slide }: { slide: any }) => {
   const animals = [
     { name: "Tubarão", letter: "D", image: discShark, color: "red" },
-    { name: "Golfinho", letter: "I", image: discDolphin, color: "yellow" },
-    { name: "Águia", letter: "C", image: discEagle, color: "purple" },
+    { name: "Águia", letter: "I", image: discEagle, color: "yellow" },
+    { name: "Golfinho", letter: "C", image: discDolphin, color: "purple" },
     { name: "Lobo", letter: "S", image: discWolf, color: "blue" },
   ];
 
